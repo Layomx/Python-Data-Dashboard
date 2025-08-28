@@ -1,0 +1,5 @@
+matplotlib 
+ttkbootstrap 
+pandas
+numpy
+Pillow
