@@ -65,7 +65,7 @@ class Visualizations:
         monthly_data['Order Date'] = monthly_data['Order Date'].dt.to_timestamp()
         
         # Plotting
-        fig, ax = plt.subplots(figsize = (6, 4))
+        fig, ax = plt.subplots(figsize = (4, 2))
         ax.plot(monthly_data['Order Date'], monthly_data['Sales'], label = 'Ventas', linewidth = 2)
         ax.plot(monthly_data['Order Date'], monthly_data['Profit'], label = 'Beneficio', linewidth = 2)
         
@@ -95,7 +95,7 @@ class Visualizations:
             }).reset_index()
         
         # Plotting
-        fig, ax = plt.subplots(figsize = (6, 4))
+        fig, ax = plt.subplots(figsize = (4, 2))
         x = np.arange(len(category_data['Category']))
         width = 0.35
         
@@ -136,7 +136,7 @@ class Visualizations:
             }).reset_index()
         
         # Plotting
-        fig, ax = plt.subplots(figsize = (6, 4))
+        fig, ax = plt.subplots(figsize = (4, 2))
         ax.bar(region_data['Region'], region_data['Sales'], alpha=0.7, 
             color=['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728'])
         
@@ -172,7 +172,7 @@ class Visualizations:
             }).reset_index()
         
         # Plotting
-        fig, (ax1, ax2) = plt.subplots(1, 2, figsize = (10, 4))
+        fig, (ax1, ax2) = plt.subplots(1, 2, figsize = (4, 2))
         
         # Sales graphic
         ax1.pie(segment_data['Sales'], labels = segment_data['Segment'], autopct = '%1.1f%%')

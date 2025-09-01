@@ -23,7 +23,7 @@ class Dashboard:
         
         # Main windows configuration
         self.root.title("Superstore Dashboard")
-        self.root.geometry("1200x800")
+        self.root.state("zoomed")
         
         # Main frame
         self.main_frame = tb.Frame(self.root, padding = 10)
