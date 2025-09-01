@@ -10,7 +10,7 @@ def load_data():
         pd.DataFrame: The loaded DataFrame if successful, None otherwise.
     """
     try:
-        df = pd.read_csv(".../data/Superstore.csv", encoding = 'latin1')
+        df = pd.read_csv("./data/Superstore.csv", encoding = 'latin1')
         logger.info("Data loaded successfully.")
         debug_dataframe(df, "Superstore Original Data")
         return df

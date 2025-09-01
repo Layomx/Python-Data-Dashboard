@@ -13,6 +13,7 @@ class Dashboard:
         self.root = root
         self.style = tb.Style("darkly")
         self.setup_ui()
+        self.figures = {} # To store references to figures and canvases
     
     # UI configuration
     def setup_ui(self):
@@ -100,9 +101,9 @@ class Dashboard:
         
         # Category filter
         tb.Label(control_frame, text = "Category:").pack(side = tk.LEFT, padx = 5)
-        self.categry_var = tk.StringVar(value = "Everything")
+        self.category_var = tk.StringVar(value = "Everything")
         categories = ["Everything", "Furniture", "Office Supplies", "Technology"]
-        category_dropdown = tb.Combobox(control_frame, textvariable = self.categry_var, values = categories, width = 15)
+        category_dropdown = tb.Combobox(control_frame, textvariable = self.category_var, values = categories, width = 15)
         category_dropdown.pack(side = tk.LEFT, padx = 5)
         
         # Year filter
@@ -124,6 +125,6 @@ class Dashboard:
             dict: Dictionary containing selected 'category' and 'year' values.
         """
         return {
-            'category': self.category_war.get(),
+            'category': self.category_var.get(),
             'year': self.year_var.get()
         }
