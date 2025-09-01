@@ -49,7 +49,3 @@ Thumbs.db
 *.log
 *.sqlite3
 *.db
-
-# Data folders
-data/*
-!data/example.csv
