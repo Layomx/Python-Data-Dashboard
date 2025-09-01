@@ -6,16 +6,18 @@ logging.basicConfig(level = logging.INFO, format = '%(asctime)s - %(name)s - %(l
 logger = logging.getLogger(__name__)
 
 def setup_logging():
-    """_summary_
+    """
+    Sets up the logging configuration for the application.
     """
     logger.info("Logging is set up.")
     
 def debug_dataframe(df, name = "DataFrame"):
-    """_summary_
+    """
+    Logs the shape and first few rows of a DataFrame for debugging purposes.
 
     Args:
-        df (_type_): _description_
-        name (str, optional): _description_. Defaults to "DataFrame".
+        df (pd.DataFrame): The DataFrame to be inspected.
+        name (str, optional): Name to identify the DataFrame in logs. Defaults to "DataFrame".
     """
     logger.info(f"{name}: {df.shape[0]} filas, {df.shape[1]} columns")
     logger.info(f"Columns: {list(df.columns)}")

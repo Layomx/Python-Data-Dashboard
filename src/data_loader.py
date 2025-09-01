@@ -3,10 +3,11 @@ from pathlib import Path
 from utils import debug_dataframe, logger
 
 def load_data():
-    """_summary_
+    """
+    Loads the DataFrame from the CSV file.
 
     Returns:
-        _type_: _description_
+        pd.DataFrame: The loaded DataFrame if successful, None otherwise.
     """
     try:
         df = pd.read_csv(".../data/Superstore.csv", encoding = 'latin1')

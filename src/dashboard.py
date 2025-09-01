@@ -89,10 +89,11 @@ class Dashboard:
         self.figures[frame_key] = (figure, canvas)
 
     def add_control_panel(self, control_callback):
-        """_summary_
+        """
+        Adds a control panel with filters to the dashboard.
 
         Args:
-            control_callback (_type_): _description_
+            control_callback (callable): Function to be called when the user applies filters.
         """
         control_frame = tb.Frame(self.main_frame)
         control_frame.pack(fill = tk.X, padx = 10, pady = 5)
@@ -116,7 +117,11 @@ class Dashboard:
         apply_btn.pack(side = tk.LEFT, padx = 10)
         
     def get_filters(self):
-        """_summary_
+        """
+        Returns the current filter selections from the control panel.
+        
+        Returns:
+            dict: Dictionary containing selected 'category' and 'year' values.
         """
         return {
             'category': self.category_war.get(),
