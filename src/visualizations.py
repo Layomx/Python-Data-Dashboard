@@ -102,7 +102,7 @@ class Visualizations:
         ax.bar(x - width / 2, category_data['Sales'], width, label = 'Sales', alpha = 0.8)
         ax.bar(x + width / 2, category_data['Profit'], width, label = 'Profit', alpha = 0.8)
         
-        ax.set_title('Sales and Profit pe Category')
+        ax.set_title('Sales and Profit per Category')
         ax.set_xlabel('Category')
         ax.set_ylabel('Amount ($)')
         ax.set_xticks(x)
