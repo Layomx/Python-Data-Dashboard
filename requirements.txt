@@ -1,5 +1,6 @@
-matplotlib 
-ttkbootstrap 
+matplotlib
+ttkbootstrap
 pandas
 numpy
 Pillow
+seaborn

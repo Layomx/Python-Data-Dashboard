@@ -9,3 +9,7 @@
 - Improved the data loader scripts with new utils
 - Implemented all modules in the main archive
 - First MVP
+
+## [0.0.1] - 2025 - 09 - 01
+- Many bugs fixed
+- TODO: Fix more bugs related to plots
